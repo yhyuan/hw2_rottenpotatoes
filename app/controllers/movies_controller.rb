@@ -47,7 +47,7 @@ class MoviesController < ApplicationController
    #if(sortSession and ratingsSession and @sort and (@ratingString.length > 0))
    #  redirect_to :ratingString=>@ratingString, :sort=>@sort
    #else
-   @movies = Movie.find(:all, <img src="http://s1.wp.com/wp-includes/images/smilies/icon_surprised.gif?m=1129645325g" alt=":o" class="wp-smiley"> rder => @sort, :conditions =>@condition) 
+   @movies = Movie.find(:all, :order => @sort, :conditions =>@condition) 
    #end
   end
  
